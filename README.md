@@ -12,6 +12,20 @@ Until SFUSD publishes final boundaries, future results must be labeled as modele
 
 - `data/schools.geojson`: SFUSD elementary-school locations, reused from `sfusd-graphic`
 - `data/neighborhoods.geojson`: San Francisco neighborhood polygons, reused from `sfusd-graphic`
+- `data/attendance_areas.geojson`: current SFUSD attendance areas used only as a provisional scenario
+
+## Implemented visual
+
+The React and MapLibre app lets readers select one of 58 schools with attendance areas and compare:
+
+- 2025–26 CDE current enrollment by race/ethnicity;
+- 2019–23 ACS nearby resident demographics;
+- current CDE socioeconomically disadvantaged enrollment;
+- a Census-based nearby low-income indicator from SFDPH.
+
+Run `npm run data` to rebuild `public/data/school-comparisons.json`, then `npm run dev` to preview the app.
+
+Nearby estimates are provisional. Census tracts and block groups are assigned to an attendance area using their Census internal point; the app does not claim these are SFUSD's future boundaries or assignments.
 
 ## Recommended current-enrollment sources
 
